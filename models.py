@@ -7,7 +7,9 @@ class Team:
         self.lineup = {"pg": None, "sg": None, "sf": None,
                  "pf": None, "c": None}
         self.points = 0
+        self.running_points = 0
         self.fouls = 0
+        self.points_by_quarter = {}
 
 class Stats:
     
@@ -19,6 +21,8 @@ class Stats:
         self.two_pt = 0
         self.turnovers = 0
         self.fouls = 0
+        self.ft_att = 0
+        self.ft = 0
         self.oreb = 0
         self.dreb = 0
     
@@ -35,4 +39,5 @@ class Player:
         self.three_point_pct = random.randrange(0, 45, 1)
         self.two_point_pct = random.randrange(35, 70, 1)
         self.three_chance = random.randrange(0, 40, 1)
+        self.ft_pct = random.randrange(60, 80, 1)
         self.stats = Stats()
